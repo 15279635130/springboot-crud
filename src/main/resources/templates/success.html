@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试页面</title>
+</head>
+<body>
+    <h1>测试成功</h1>
+    <div th:text="${hello}"></div>
+    <div th:utext="${hello}"></div>
+    <h4 th:utext="${user}" th:each="user:${userList}"></h4>
+    <h4>
+        <span th:each="user:${userList}">[[${user}]]</span>
+    </h4>
+</body>
+</html>
